@@ -15,7 +15,7 @@
 		ACBAC8251C5BE83900E5D4B0 /* iOS_Project_Final_VersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBAC8241C5BE83900E5D4B0 /* iOS_Project_Final_VersionTests.m */; };
 		ACBAC8311C5BE8FF00E5D4B0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBAC8301C5BE8FF00E5D4B0 /* DetailViewController.m */; };
 		ACBAC8361C5BE97400E5D4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBAC8341C5BE97400E5D4B0 /* Main.storyboard */; };
-		ACBAC83A1C5BEAAF00E5D4B0 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAC8391C5BEAAF00E5D4B0 /* news.png */; };
+		ACBAC83A1C5BEAAF00E5D4B0 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBAC8391C5BEAAF00E5D4B0 /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		ACBAC82F1C5BE8EA00E5D4B0 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		ACBAC8301C5BE8FF00E5D4B0 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		ACBAC8351C5BE97400E5D4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ACBAC8391C5BEAAF00E5D4B0 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		ACBAC8391C5BEAAF00E5D4B0 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		ACBAC8071C5BE83900E5D4B0 /* iOS Project Final Version */ = {
 			isa = PBXGroup;
 			children = (
-				ACBAC8391C5BEAAF00E5D4B0 /* news.png */,
+				ACBAC8391C5BEAAF00E5D4B0 /* default.png */,
 				ACBAC80C1C5BE83900E5D4B0 /* AppDelegate.h */,
 				ACBAC80D1C5BE83900E5D4B0 /* AppDelegate.m */,
 				ACBAC82F1C5BE8EA00E5D4B0 /* DetailViewController.h */,
@@ -207,7 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBAC83A1C5BEAAF00E5D4B0 /* news.png in Resources */,
+				ACBAC83A1C5BEAAF00E5D4B0 /* default.png in Resources */,
 				ACBAC8361C5BE97400E5D4B0 /* Main.storyboard in Resources */,
 				ACBAC8191C5BE83900E5D4B0 /* LaunchScreen.xib in Resources */,
 				ACBAC8161C5BE83900E5D4B0 /* Images.xcassets in Resources */,

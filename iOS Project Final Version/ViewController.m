@@ -17,11 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    //Find a news feed from the local bundle
-    //NSURL * url = [[NSBundle mainBundle]URLForResource:@"news" withExtension:@"xml"];
-    NSURL *url = [NSURL URLWithString:@"http://rss.cnn.com/rss/edition.rss"];    
+    //Initialize url
+    NSURL * url = [NSURL URLWithString:@"http://rss.cnn.com/rss/edition.rss"];
     
     //Initialize data
     NSData * data = [NSData dataWithContentsOfURL:url];
@@ -51,8 +49,7 @@
         image = [[NSMutableString alloc]init];
     }
     
-    if([element isEqualToString:@"media:thumbnail"])
-    {
+    if([element isEqualToString:@"media:thumbnail"]) {
         image =[[attributeDict objectForKey: @"url"] mutableCopy];
     }
 }
@@ -96,12 +93,10 @@
 - (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    //return [_list count];
     return 20;
 }
 
@@ -120,16 +115,14 @@
     
     cell.textLabel.numberOfLines = 3;
     
-    //cell.imageView.image = [UIImage imageNamed:@"news.png"];
-    
     NSString * imgUrl = [[feeds objectAtIndex:indexPath.row] objectForKey:@"image"];
     
     if ( [imgUrl isEqualToString:@""] )
     {
-        cell.imageView.image = [UIImage imageNamed:@"default.png"];//Default Image
+        cell.imageView.image = [UIImage imageNamed:@"default.png"];
         
     } else {
-        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: [[feeds objectAtIndex:indexPath.row] objectForKey:@"image"]]]];//IMAGE FROM REMOTE URL
+        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: [[feeds objectAtIndex:indexPath.row] objectForKey:@"image"]]]];
     }
     
     return cell;
@@ -145,8 +138,13 @@
     if ([[segue identifier] isEqualToString:@"showConnector"]) {
         
         DetailViewController * detailView = segue.destinationViewController;
+        
         NSIndexPath * indexPath = [self.tableView indexPathForSelectedRow];
-        detailView.detailViewControllerString = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
+        
+        detailView.detailViewControllerTitle = [[feeds objectAtIndex:indexPath.row] objectForKey:@"title"];
+        detailView.detailViewControllerLink = [[feeds objectAtIndex:indexPath.row] objectForKey:@"link"];
+        detailView.detailViewControllerPubDate = [[feeds objectAtIndex:indexPath.row] objectForKey:@"pubDate"];
+        detailView.detailViewControllerImage = [[feeds objectAtIndex:indexPath.row] objectForKey:@"image"];
     }
 }
 

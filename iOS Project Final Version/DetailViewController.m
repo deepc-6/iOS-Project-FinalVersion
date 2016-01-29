@@ -15,26 +15,36 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    _detailViewControllerLabel.text = _detailViewControllerString;
+    [super viewDidLoad];
+    
+    _detailViewControllerLabel.text = _detailViewControllerTitle;
+    
     _detailViewControllerLabel.numberOfLines = 5;
+    
+    NSURL * imageURL = [NSURL URLWithString : self.detailViewControllerImage];
+    
+    NSData * imageData = [NSData dataWithContentsOfURL : imageURL];
+    
+    UIImage * image = [UIImage imageWithData : imageData];
+    
+    if ( [self.detailViewControllerImage isEqualToString:@""] ) {
+        _imageView.image = [UIImage imageNamed:@"default.png"];
+    } else {
+        _imageView.image = image;
+    }
+    
+    NSURL * myURL = [NSURL URLWithString : self.detailViewControllerLink];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL : myURL];
+    
+    [self.webView loadRequest : request];
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8yE-Pp-1eu">
                                 <rect key="frame" x="0.0" y="0.0" width="391" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="45" id="cjP-bo-Ts7">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -57,17 +58,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFD-7q-YQR">
+                                <rect key="frame" x="16" y="261" width="305" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xY-zo-7hc">
-                                <rect key="frame" x="64" y="99" width="252" height="79"/>
+                                <rect key="frame" x="69" y="72" width="252" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HX-Th-vJm">
+                                <rect key="frame" x="145" y="153" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="detailViewControllerLabel" destination="3xY-zo-7hc" id="LWj-q1-AJL"/>
+                        <outlet property="detailViewControllerLabel" destination="3xY-zo-7hc" id="aXl-7O-QK6"/>
+                        <outlet property="imageView" destination="2HX-Th-vJm" id="8re-pL-fGY"/>
+                        <outlet property="webView" destination="uFD-7q-YQR" id="wU5-yS-zjf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZF-5N-BGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
